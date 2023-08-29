@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.5'
 services:
   dev:
     build:
@@ -7,4 +7,4 @@ services:
     volumes:
       - ./:/app
     ports:
-      - '3000:3000'
+      - '80:8000'

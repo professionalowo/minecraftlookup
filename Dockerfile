@@ -2,13 +2,13 @@ FROM node:alpine
 LABEL authors="professionalowo"
 WORKDIR /app
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
 ADD . .
+
+RUN npm install serve -g
+RUN npm install typescript -g
 
 RUN npm install
 
-ENTRYPOINT ["/entrypoint.sh"]
-
-CMD ["npm", "run", "dev"]
+RUN npm run build
+EXPOSE 8000
+CMD ["npm", "run", "serve"]
