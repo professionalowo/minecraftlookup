@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const Searchbar = (props: { nameHandler: (username: string) => void }) => {
+function Searchbar(props: { nameHandler: (username: string) => void }) {
     const [name, setName] = useState<string>("");
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {

@@ -6,7 +6,7 @@ function About() {
                 <div>
                     <p>Hello</p>
                     <p>This is my first project using react + typescript</p>
-                    <p>Please post suggestions at my GitHub</p>
+                    <p>Please post suggestions on my GitHub</p>
                 </div>
                 <p>Look at the <a href="https://github.com/professionalowo/minecraftlookup/tree/master"
                                   className="hover:text-blue-600 text-gray-600 font-bold">source</a>!</p>

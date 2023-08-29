@@ -1,14 +1,10 @@
-version: "3.4"
+version: '3.8'
 services:
-  vite_docker:
-    image: node:alpine
-    container_name: minecraft_lookup
-    entrypoint: /bin/sh
-    ports:
-      - "8000:8000"
-    working_dir: /srv/app
+  dev:
+    build:
+      context: ./
+      dockerfile: Dockerfile
     volumes:
-      - type: bind
-        source: ./
-        target: /srv/app
-    tty: true
+      - ./:/app
+    ports:
+      - '3000:3000'
