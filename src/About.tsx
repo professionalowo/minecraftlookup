@@ -1,4 +1,4 @@
-function About() {
+export default function About() {
     return (
         <div className="w-screen flex flex-wrap justify-center align-middle items-center my-5">
             <div className="w-fit h-fit bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -14,5 +14,3 @@ function About() {
         </div>
     )
 }
-
-export default About

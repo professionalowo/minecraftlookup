@@ -1,4 +1,4 @@
-function DeleteAllComponent(props: { onClick: () => void }) {
+export default function DeleteAllComponent(props: { onClick: () => void }) {
     return <div className="flex flex-wrap justify-center mx-2">
         <div className="max-w-xs bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full flex flex-wrap justify-center items-center">
             <button onClick={props.onClick}
@@ -8,5 +8,3 @@ function DeleteAllComponent(props: { onClick: () => void }) {
         </div>
     </div>;
 }
-
-export default DeleteAllComponent;

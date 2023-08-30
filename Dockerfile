@@ -4,10 +4,8 @@ WORKDIR /app
 
 ADD . .
 
-RUN npm install serve -g
-RUN npm install typescript -g
-
-RUN npm install
+RUN npm i typescript serve -g
+RUN npm i
 
 RUN npm run build
 EXPOSE 8000

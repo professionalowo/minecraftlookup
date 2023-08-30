@@ -1,6 +1,6 @@
 import {Link, Outlet} from "react-router-dom";
 
-function Navbar() {
+export default function Navbar() {
     return <>
         <div className="w-screen bg-gray-200 flex flex-wrap gap-5 p-3 shadow-md rounded">
             <p className="font-bold">SkinLookup</p>
@@ -10,5 +10,3 @@ function Navbar() {
         <Outlet/>
     </>
 }
-
-export default Navbar;

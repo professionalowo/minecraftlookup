@@ -6,7 +6,7 @@ interface ShowcaseProps {
     removeFunction: (username: string) => void
 }
 
-const Showcase = (props: ShowcaseProps) => {
+export default function Showcase(props: ShowcaseProps){
     const username : string = props.username;
     useEffect(() => {
         usernameHelper(username).then(result => {
@@ -34,4 +34,3 @@ const Showcase = (props: ShowcaseProps) => {
         </div>
     )
 }
-export default Showcase;

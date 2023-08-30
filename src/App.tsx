@@ -3,7 +3,7 @@ import Showcase from "./components/Showcase.tsx";
 import Header from "./components/headbar/Header.tsx";
 
 
-const App = () => {
+export default function App(){
     const [usernames, setUsernames] = useState<string[]>([]);
     const addToUsernames = (username: string): void => {
         if (!usernames.includes(username.toUpperCase())) {
@@ -22,5 +22,3 @@ const App = () => {
         </>
     )
 }
-
-export default App

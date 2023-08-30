@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Form} from "react-router-dom";
 
-function Searchbar(props: { nameHandler: (username: string) => void }) {
+export default function Searchbar(props: { nameHandler: (username: string) => void }) {
     const [name, setName] = useState<string>("");
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
@@ -38,5 +38,3 @@ function Searchbar(props: { nameHandler: (username: string) => void }) {
         </div>
     )
 }
-
-export default Searchbar;
