@@ -15,7 +15,7 @@ const router = createBrowserRouter(
         <Route path="/" element={<Navbar/>}>
             <Route index element={<App/>}/>
             <Route path="about" element={<About/>}/>
-            <Route path="viewer" element={<SkinViewComponent/>}/>
+            <Route path="viewer/:username" element={<SkinViewComponent/>}/>
         </Route>
     )
 )

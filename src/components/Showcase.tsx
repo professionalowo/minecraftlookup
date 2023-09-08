@@ -1,22 +1,24 @@
 import {useEffect} from "react";
 import usernameHelper from "../functions/usernameHelper.ts";
+import {Link} from "react-router-dom";
 
 interface ShowcaseProps {
     username: string,
     removeFunction: (username: string) => void
 }
 
-export default function Showcase(props: ShowcaseProps){
-    const username : string = props.username;
+export default function Showcase(props: ShowcaseProps) {
+    const username: string = props.username;
     useEffect(() => {
         usernameHelper(username).then(result => {
-            if (result.status==="ERR") {
+            if (result.status === "ERR") {
                 props.removeFunction(username);
             }
         })
     }, [])
     const imgLink: string = `https://mineskin.eu/armor/body/${username}/100.png`;
     const downloadLink: string = `https://mineskin.eu/download/${username}`;
+    const viewerLink: string = `/viewer/${username}`;
     return (
         <div
             className="w-auto max-w-xs flex content-center flex-col bg-white shadow-md rounded px-4 py-5 mb-2 mx-1">
@@ -30,7 +32,10 @@ export default function Showcase(props: ShowcaseProps){
                 <button onClick={() => props.removeFunction(username)}
                         className="bg-red-600 hover:bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-1/2">Remove
                 </button>
+
             </div>
+            <Link to={viewerLink}
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded focus:outline-none focus:shadow-outline w-1/2 self-center">Inspect</Link>
         </div>
     )
 }
