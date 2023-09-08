@@ -8,14 +8,14 @@ import {
 } from "react-router-dom";
 import About from "./About.tsx";
 import Navbar from "./components/Navbar.tsx";
-import SkinViewer from "./components/SkinViewer.tsx";
+import SkinViewComponent from "./components/SkinViewComponent.tsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<Navbar/>}>
             <Route index element={<App/>}/>
             <Route path="about" element={<About/>}/>
-            <Route path="viewer" element={<SkinViewer/>}/>
+            <Route path="viewer" element={<SkinViewComponent/>}/>
         </Route>
     )
 )
